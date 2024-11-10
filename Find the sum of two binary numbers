@@ -28,3 +28,5 @@ int main() {
     scanf("%s", bin2);
 
     addBinary(bin1, bin2);
+    return 0;
+}
