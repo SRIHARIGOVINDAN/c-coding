@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+// Define a structure for address
+struct Address {
+    char street[100];
+    char city[50];
+    int pin;
+};
+
+// Define a structure for student
+struct Student {
+    char name[50];
+    int rollNo;
+    struct Address address;
+};
+
+int main() {
+    struct Student student;
+
+    // Get inputs from the user
+    printf("Enter student's name: ");
+    scanf("%s", student.name);
+    printf("Enter roll number: ");
+    scanf("%d", &student.rollNo);
+    printf("Enter street: ");
+    scanf("%s", student.address.street);
+    printf("Enter city: ");
+    scanf("%s", student.address.city);
+    printf("Enter pin code: ");
+    scanf("%d", &student.address.pin);
+
+    // Display the information
+    printf("\nStudent Information:\n");
+    printf("Name: %s\n", student.name);
+    printf("Roll No: %d\n", student.rollNo);
+    printf("Address: %s, %s, %d\n", student.address.street, student.address.city, student.address.pin);
+
+    return 0;
+}
